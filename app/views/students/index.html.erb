@@ -3,3 +3,10 @@
   <p>Cohort: <%= student.cohort_number %> </p>
   <p>Age: <%= student.age %> </p>
 <% end %>
+
+<h3>Instructors</h3>
+<ul>
+<% @instructors.each do |instructor| %>
+  <li><%= link_to instructor.name, "/instructors/#{instructor.id}" %></li>
+<% end %>
+</ul>
